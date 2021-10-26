@@ -8,8 +8,12 @@ function App() {
   return (
     <Router>
       <Header />
-      <Main />
 
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+      </Switch>
     </Router>
   );
 }
