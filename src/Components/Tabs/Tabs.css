@@ -1,0 +1,185 @@
+.widget {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -120px;
+  width: 1100px;
+  min-height: 250px;
+  height: 250px;
+  color: #000;
+  background: inherit;
+  word-break: break-all;
+  padding: 0;
+}
+
+.bloc-tabs {
+  display: flex;
+  height: 70px;
+}
+
+.bloc-tabs img {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.tabs {
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.301);
+  cursor: pointer;
+  border-bottom: 1px solid rgb(104, 104, 104);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tabs:nth-child(2) {
+  border-left: 1px solid rgb(104, 104, 104);
+  border-right: 1px solid rgb(104, 104, 104);
+}
+
+.tabs:first-child {
+  border-top-left-radius: 6px;
+}
+
+.tabs:last-child {
+  border-top-right-radius: 6px;
+}
+
+.active-tabs {
+  background: #263366 !important;
+  border-bottom: 1px solid rgb(104, 104, 104);
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  color: white;
+  background: #263366;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.active-content {
+  display: block;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  border-radius: none;
+  height: 50px;
+}
+
+.btn {
+  text-align: inherit;
+  border: 0;
+  color: grey !important;
+  background-color: #fff !important;
+  border-radius: 0 !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.content .dropdown-toggle::after {
+  color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.tb1 .dropdown-menu {
+  min-width: 259px;
+}
+
+.tb1 .row {
+  --bs-gutter-x: 0;
+}
+
+.tb1 .col-5 {
+  padding: 0;
+}
+
+.tb1 .col-5 input {
+  height: 17px;
+}
+
+.css-1ozefeb {
+  inset: 2px auto 0 73px !important;
+}
+
+.tb1 .col-2 {
+  padding: 0;
+  margin-top: 31px;
+}
+
+.tb2 input {
+  margin: 10px 0;
+  height: 50px;
+}
+
+.tb2 button{
+  margin-top: 34px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ffda00;
+  background-color: #ffda00;
+  transition: 0.4s;
+}
+
+.tb2 button:hover{
+  background-color: inherit;
+  color: #ffda00;
+}
+
+.col-2 button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffda00;
+  background-color: #ffda00;
+  transition: 0.4s;
+}
+
+.col-2 button:hover {
+  background-color: inherit;
+  color: #ffda00;
+}
+
+.css-1lwbda4-MuiStack-root {
+  background-color: #fff;
+  border: none !important;
+  border-right: 1px solid black !important;
+}
+
+.css-1dozdou {
+  margin: 0 !important;
+  padding: 40px 0;
+  color: white;
+  background-color: #263366;
+}
+
+.css-1dozdou .MuiSvgIcon-root {
+  color: white;
+}
+
+.css-dhopo {
+  min-height: 230px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}

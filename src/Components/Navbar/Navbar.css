@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    justify-content: start;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu-bars {
+    color: #000!important; 
+    margin-right: 2rem;
+    font-size: 2rem;
+    background: none;
+    position: absolute;
+    top: -65px;
+    right: 0;
+}
+
+@media screen and (min-width: 1336px) {
+    .menu-bars {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    nav{
+        padding: 15px 5px;
+    }
+}
+
+.nav-menu {
+    height: 100vh;
+    background-color: #fff;
+    max-width: 300px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-menu-items{
+  width: 350px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.search_sidebar{
+    position: relative;
+    width: 100%;
+    height: auto!important;
+}
+
+.search_sidebar input{
+    width: 100%;
+    padding: 10px 30px 10px 45px;
+    outline-offset: 0px;
+    margin-bottom: 30px;
+}
+
+.search_sidebar button{
+    background: inherit;
+    border: none;
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    left: 5px;
+}
+
+.sidebar-bold a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #263366!important;
+    border-bottom: 1px solid #d3d3d3;
+    padding: 10px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.navbar-nav .dropdown a, .sidebar-light a{
+    width: 100%;
+    padding: 10px 0;
+    display: inline-block;
+    color: #000!important;
+    text-decoration: none;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.navbar-nav .dropdown .dropdown-item{
+white-space: inherit;
+}
+
+
+.navbar-nav .dropdown-menu{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+.slick-slider .slick-prev {
+    left: 35px !important;
+    color: black !important;
+    z-index: 1;
+    background: inherit;
+}
+
+.slick-slider .slick-next {
+    right: 35px !important;
+    color: black !important;
+    z-index: 1;
+    background: inherit;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 30px;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.bg-slide1 img {
+    min-width: 600px;
+    max-height: 800px;
+}
+
+
