@@ -156,7 +156,7 @@ button {
 }
 
 .css-1lwbda4-MuiStack-root {
-  background-color: #fff;
+  background-color: #fff!important;
   border: none !important;
   border-right: 1px solid black !important;
 }
