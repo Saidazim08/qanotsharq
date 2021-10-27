@@ -12,6 +12,12 @@
   padding: 0;
 }
 
+@media only screen and (max-width: 580px) {
+  .widget {
+    display: none;
+  }
+}
+
 .bloc-tabs {
   display: flex;
   height: 70px;
@@ -58,6 +64,7 @@ button {
 }
 .content-tabs {
   flex-grow: 1;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
 }
 .content {
   color: white;
@@ -91,7 +98,7 @@ button {
 }
 
 .content .dropdown-toggle::after {
-  color: black;
+  color: black !important;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -128,7 +135,7 @@ button {
   height: 50px;
 }
 
-.tb2 button{
+.tb2 button {
   margin-top: 34px;
   width: 100%;
   height: 50px;
@@ -137,7 +144,7 @@ button {
   transition: 0.4s;
 }
 
-.tb2 button:hover{
+.tb2 button:hover {
   background-color: inherit;
   color: #ffda00;
 }
@@ -156,7 +163,7 @@ button {
 }
 
 .MuiFormControl-root {
-  background-color: #fff!important;
+  background-color: #fff !important;
   border: none !important;
   border-right: 1px solid rgb(104, 104, 104) !important;
 }
@@ -182,4 +189,57 @@ button {
 
 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
   border: none !important;
+}
+
+.app-drop {
+  display: inline-block;
+  position: relative;
+}
+
+.app-drop-body {
+  padding-top: 10px;
+  color: black;
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: auto;
+}
+
+.app-drop:hover .app-drop-body {
+  display: block;
+}
+
+.app-drop-body:hover {
+  display: block;
+}
+
+.app-drop-inside{
+  border-radius: 6px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 0 20px #00000030;
+}
+
+.app-drop-inside .fw-bold{
+  font-size: 15px;
+}
+
+.circle {
+  padding-bottom: 5px;
+  font-weight: 400;
+  font-size: 1.4em;
+  cursor: pointer;
+  background: #edf0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.app-drop-body .active {
+  color: #3182c4;
+  border: 1px solid #3182c4;
+  background: #3182c429;
 }

@@ -1,15 +1,15 @@
-import { useState, React } from 'react'
-import airplane from "../../images/airplane.svg"
-import ticket from "../../images/ticket.svg"
-import checking from "../../images/checking.svg"
+import { useState, React } from 'react';
+import airplane from "../../images/airplane.svg";
+import ticket from "../../images/ticket.svg";
+import checking from "../../images/checking.svg";
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import './Tabs.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import './Tabs.css';
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 
 function Tabs() {
@@ -81,7 +81,7 @@ function Tabs() {
                   variant="secondary"
                   onSelect={selectFlyfrom}
                 >
-                  <Dropdown.Item className="d-flex" eventKey="Ташкент - UZ"><p><b>Киев</b> Украина</p><span className="ms-auto text-muted">TAS</span> </Dropdown.Item>
+                  <Dropdown.Item className="d-flex" variant="success" eventKey="Ташкент - UZ"><p><b>Киев</b> Украина</p><span className="ms-auto text-muted">TAS</span> </Dropdown.Item>
                   <Dropdown.Item className="d-flex" eventKey="Москва - RU"><p><b>Москва</b> Российская <br /> Федерация</p><span className="ms-auto text-muted">MOW</span> </Dropdown.Item>
                   <Dropdown.Item className="d-flex" eventKey="Ташкент - UZ"><p><b>Ташкент</b> Республика <br /> Узбекистан</p><span className="ms-auto text-muted">TAS</span> </Dropdown.Item>
                 </DropdownButton>
@@ -133,7 +133,61 @@ function Tabs() {
               </div>
             </div>
             <div className="col-12">
-              <p>1 пассажир</p>
+              <div className="app-drop mt-3">
+                <span className="me-2">1</span>
+                Пассажир
+                <FontAwesomeIcon className="ms-2 btn-group-vertical" icon={faCaretDown} />
+                <div className="app-drop-body">
+                  <div className="app-drop-inside">
+                    <div className="row">
+                      <div className="col-12 d-flex justify-content-between">
+                        <div className="d-flex flex-column">
+                          <span className="fw-bold">Взрослые</span>
+                          <p>от 15 лет</p>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <span className="circle">-</span>
+                          <span className="mx-2"> 1 </span>
+                          <span className="circle active"> + </span>
+                        </div>
+                      </div>
+                      <div className="col-12 d-flex justify-content-between">
+                        <div className="d-flex flex-column">
+                          <span className="fw-bold">Дети</span>
+                          <p>от 2 до 14 лет</p>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <span className="circle"> - </span>
+                          <span className="mx-2"> 1 </span>
+                          <span className="circle active"> + </span>
+                        </div>
+                      </div>
+                      <div className="col-12 d-flex justify-content-between">
+                        <div className="d-flex flex-column">
+                          <span className="fw-bold">Младенцы</span>
+                          <p>до 2 лет</p>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <span className="circle"> - </span>
+                          <span className="mx-2"> 1 </span>
+                          <span className="circle active"> + </span>
+                        </div>
+                      </div>
+                      <div className="col-12 d-flex justify-content-between">
+                        <div className="d-flex flex-column">
+                          <span className="fw-bold">Младенцы с <br /> местом</span>
+                          <p>до 2 лет</p>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <span className="circle"> - </span>
+                          <span className="mx-2"> 1 </span>
+                          <span className="circle active"> + </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

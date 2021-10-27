@@ -1,0 +1,40 @@
+.way {
+padding: 0!important;
+}
+
+.way-items{
+    --bs-gutter-x: 0;
+}
+
+.way-items img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.way-items-body{
+    padding: 10px;
+    width: 85%;
+    border-radius: 6px;
+    position: absolute;
+    bottom: -50px;
+    left: 30px;
+    box-shadow: 0 10px 65px rgb(0 0 0 / 6%);
+    background-color: white;
+}
+
+.st-title{
+    color: #263366;
+    font-size: 25px;
+}
+
+.nd-title{
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width:995px) {
+    .way{
+    width: 1110px;
+    }
+}
