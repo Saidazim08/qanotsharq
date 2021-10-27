@@ -1,10 +1,10 @@
 import React, { Component } from "react";
+import './MainCarousel.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import bg1 from "../../images/slide1.jpg";
-import bg2 from "../../images/slide2.jpg";
-import './MainCarousel.css';
+import bg1 from "../../images/slide1.webp";
+import bg2 from "../../images/slide2.webp";
 
 export default class MainCarousel extends Component {
     render() {

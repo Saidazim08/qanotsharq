@@ -1,10 +1,10 @@
 import React from 'react'
 import "../FontAwesomeIcon/index"
-import first from '../../images/1st.jpg'
-import second from '../../images/2nd.jpg'
-import third from '../../images/3rd.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Way.css'
+import first from '../../images/1st.png'
+import second from '../../images/2nd.png'
+import third from '../../images/3rd.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Way = () => {
     return (

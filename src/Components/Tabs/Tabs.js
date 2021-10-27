@@ -1,4 +1,5 @@
 import { useState, React } from 'react';
+import './Tabs.css';
 import airplane from "../../images/airplane.svg";
 import ticket from "../../images/ticket.svg";
 import checking from "../../images/checking.svg";
@@ -9,7 +10,6 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import './Tabs.css';
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 
 function Tabs() {
