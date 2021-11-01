@@ -1,8 +1,8 @@
 .way {
-padding: 0!important;
+    padding: 0 !important;
 }
 
-.way-items{
+.way-items {
     --bs-gutter-x: 0;
 }
 
@@ -13,28 +13,37 @@ padding: 0!important;
     object-position: center;
 }
 
-.way-items-body{
-    padding: 10px;
-    width: 85%;
-    border-radius: 6px;
-    position: absolute;
-    bottom: -50px;
-    left: 30px;
-    box-shadow: 0 10px 65px rgb(0 0 0 / 6%);
-    background-color: white;
+.way-items-in {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.st-title{
+.way-items-body {
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 10px 65px rgb(0 0 0 / 6%);
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.way-items-body a{
+    text-decoration: none;
+}
+
+.st-title {
     color: #263366;
     font-size: 25px;
 }
 
-.nd-title{
+.nd-title {
     margin-bottom: 30px;
 }
 
-@media only screen and (min-width:995px) {
-    .way{
-    width: 1110px;
+@media only screen and (min-width: 995px) {
+    .way {
+        width: 1110px;
     }
 }

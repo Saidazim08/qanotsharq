@@ -1,0 +1,16 @@
+.section-2{
+    background-color: #f4feff;
+    padding-bottom: 80px;
+}
+
+.section-3{
+    background: #263366;
+}
+
+.section-5{
+    background-color: #f4feff;
+}
+
+*:focus {
+    outline: none;
+}

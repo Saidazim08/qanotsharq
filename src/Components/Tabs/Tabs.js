@@ -1,18 +1,73 @@
-import { useState, React } from 'react';
+import { useState, React, Fragment } from 'react';
 import './Tabs.css';
+import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import DateFnsUtils from '@date-io/date-fns';
 import airplane from "../../images/airplane.svg";
 import ticket from "../../images/ticket.svg";
 import checking from "../../images/checking.svg";
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 
 function Tabs() {
+  let [count, setCount] = useState(1);
+  let [count1, setCount1] = useState(0);
+  let [count2, setCount2] = useState(0);
+  let [count3, setCount3] = useState(0);
+
+  function incrementCount() {
+    count = count + 1;
+    setCount(count);
+  }
+  function decrementCount() {
+    if (count === 0) {
+      return;
+    }
+    count = count - 1;
+    setCount(count);
+  }
+
+  function incrementCount1() {
+    count1 = count1 + 1;
+    setCount1(count1);
+  }
+  function decrementCount1() {
+    if (count1 === 0) {
+      return;
+    }
+    count1 = count1 - 1;
+    setCount1(count1);
+  }
+
+  function incrementCount2() {
+    count2 = count2 + 1;
+    setCount2(count2);
+  }
+  function decrementCount2() {
+    if (count2 === 0) {
+      return;
+    }
+    count2 = count2 - 1;
+    setCount2(count2);
+  }
+
+  function incrementCount3() {
+    count3 = count3 + 1;
+    setCount3(count3);
+  }
+  function decrementCount3() {
+    if (count3 === 0) {
+      return;
+    }
+    count3 = count3 - 1;
+    setCount3(count3);
+  }
+
+  const allcount = count + count1 + count2 + count3
+
+  const [selectedDate, handleDateChange] = useState(null);
+  const [selectedDate1, handleDateChange1] = useState(null);
+
   const [flyfrom, setFlyfrom] = useState('Откуда')
   const selectFlyfrom = (v) => {
     setFlyfrom(v)
@@ -29,17 +84,6 @@ function Tabs() {
     setToggleState(index);
   };
 
-  const [value, setValue] = useState('Куда');
-
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
-
-  const [value1, setValue1] = useState('Куда');
-
-  const handleChange1 = (newValue1) => {
-    setValue1(newValue1);
-  };
 
   return (
     <div className="container widget">
@@ -74,11 +118,11 @@ function Tabs() {
           <div className="row">
             <div className="col-lg-6 col-12 row tab-items">
               <div className="col-6 px-0">
-                <label className="text-white fw-bold mb-2">Откуда</label>
+                <label className="fw-bold mb-2">Откуда</label>
                 <DropdownButton
                   className="border-end"
+                  placeholder="123123"
                   title={flyfrom}
-                  variant="secondary"
                   onSelect={selectFlyfrom}
                 >
                   <Dropdown.Item className="d-flex" variant="success" eventKey="Ташкент - UZ"><p><b>Киев</b> Украина</p><span className="ms-auto text-muted">TAS</span> </Dropdown.Item>
@@ -87,9 +131,10 @@ function Tabs() {
                 </DropdownButton>
               </div>
               <div className="col-6 px-0">
-                <label className="text-white fw-bold mb-2">Куда</label>
+                <label className="fw-bold mb-2">Куда</label>
                 <DropdownButton
                   className="border-end"
+                  placeholder="123123"
                   title={flyto}
                   onSelect={selectFlyto}
                 >
@@ -102,39 +147,45 @@ function Tabs() {
             <div className="col-lg-6 col-12 row">
               <div className="col-5">
                 <label className="mb-2 fw-bold">Дата с</label>
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                  <Stack spacing={3} >
-                    <DesktopDatePicker
-                      inputFormat="dd/MM/yy"
-                      value={value}
-                      onChange={handleChange}
-                      renderInput={(params) => <TextField {...params} />}
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <Fragment>
+                    <DatePicker
+                      autoOk
+                      format="dd/MM/yyyy"
+                      minDate={new Date()}
+                      variant="inline"
+                      value={selectedDate}
+                      placeholder="Туда"
+                      onChange={handleDateChange}
                     />
-                  </Stack>
-                </LocalizationProvider>
+                  </Fragment>
+                </MuiPickersUtilsProvider>
               </div>
               <div className="col-5">
                 <label className="mb-2 fw-bold">Дата до</label>
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                  <Stack spacing={3}>
-                    <DesktopDatePicker
-                      value={value1}
-                      inputFormat="dd/MM/yy"
-                      onChange={handleChange1}
-                      renderInput={(params) => <TextField {...params} />}
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <Fragment>
+                    <DatePicker
+                      autoOk
+                      format="dd/MM/yyyy"
+                      minDate={new Date()}
+                      variant="inline"
+                      value={selectedDate1}
+                      placeholder="Обратно"
+                      onChange={handleDateChange1}
                     />
-                  </Stack>
-                </LocalizationProvider>
+                  </Fragment>
+                </MuiPickersUtilsProvider>
               </div>
               <div className="col-2">
-                <button>
+                <button type="submit">
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
               </div>
             </div>
             <div className="col-12">
               <div className="app-drop mt-3">
-                <span className="me-2">1</span>
+                <span className="me-2">{allcount}</span>
                 Пассажир
                 <FontAwesomeIcon className="ms-2 btn-group-vertical" icon={faCaretDown} />
                 <div className="app-drop-body">
@@ -146,9 +197,9 @@ function Tabs() {
                           <p>от 15 лет</p>
                         </div>
                         <div className="d-flex align-items-center">
-                          <span className="circle">-</span>
-                          <span className="mx-2"> 1 </span>
-                          <span className="circle active"> + </span>
+                          <span onClick={decrementCount} className="circle">-</span>
+                          <span className="mx-2"> {count} </span>
+                          <span onClick={incrementCount} className="circle active"> + </span>
                         </div>
                       </div>
                       <div className="col-12 d-flex justify-content-between">
@@ -157,9 +208,9 @@ function Tabs() {
                           <p>от 2 до 14 лет</p>
                         </div>
                         <div className="d-flex align-items-center">
-                          <span className="circle"> - </span>
-                          <span className="mx-2"> 1 </span>
-                          <span className="circle active"> + </span>
+                          <span onClick={decrementCount1} className="circle"> - </span>
+                          <span className="mx-2"> {count1} </span>
+                          <span onClick={incrementCount1} className="circle active"> + </span>
                         </div>
                       </div>
                       <div className="col-12 d-flex justify-content-between">
@@ -168,9 +219,9 @@ function Tabs() {
                           <p>до 2 лет</p>
                         </div>
                         <div className="d-flex align-items-center">
-                          <span className="circle"> - </span>
-                          <span className="mx-2"> 1 </span>
-                          <span className="circle active"> + </span>
+                          <span onClick={decrementCount2} className="circle"> - </span>
+                          <span className="mx-2"> {count2} </span>
+                          <span onClick={incrementCount2} className="circle active"> + </span>
                         </div>
                       </div>
                       <div className="col-12 d-flex justify-content-between">
@@ -179,9 +230,9 @@ function Tabs() {
                           <p>до 2 лет</p>
                         </div>
                         <div className="d-flex align-items-center">
-                          <span className="circle"> - </span>
-                          <span className="mx-2"> 1 </span>
-                          <span className="circle active"> + </span>
+                          <span onClick={decrementCount3} className="circle"> - </span>
+                          <span className="mx-2"> {count3} </span>
+                          <span onClick={incrementCount3} className="circle active"> + </span>
                         </div>
                       </div>
                     </div>

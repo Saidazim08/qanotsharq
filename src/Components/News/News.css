@@ -1,0 +1,32 @@
+.news .col-lg-6{
+    min-height: 175px;
+}
+
+.news img{
+    width: 190px;
+    height: 165px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+.news-card{
+    padding: 0 15px;
+}
+
+.news-card p{
+    color: white;
+    font-size: 13px;
+}
+
+.news-card a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #54b0fa!important;
+}
+
+@media only screen and (min-width: 995px) {
+    .news {
+        width: 1110px;
+    }
+}

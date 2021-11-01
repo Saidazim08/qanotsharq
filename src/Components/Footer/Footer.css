@@ -1,0 +1,38 @@
+footer {
+    background: #263366;
+}
+
+.footer-top {
+    padding: 25px 0 15px 0;
+}
+
+footer a {
+    border-radius: 50%;
+    color: white !important;
+}
+
+footer .svg-inline--fa {
+    font-size: 27px;
+}
+
+.border-bot {
+    border: 1px solid #374372;
+}
+
+.footer li {
+    margin-bottom: 10px;
+}
+
+.footer li a{
+    text-decoration: none;
+}
+
+.footer li a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 995px) {
+    .footer {
+        width: 1150px;
+    }
+}

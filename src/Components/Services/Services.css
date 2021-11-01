@@ -1,0 +1,39 @@
+.services .col-11 {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.services .col-lg-6 img {
+    width: 50%;
+    height: 190px;
+    object-fit: contain;
+    object-position: right;
+}
+
+.services .col-lg-6 .img-out{
+    object-fit: cover;
+    object-position: center;
+    right: 0!important;
+}
+
+.services .btn{
+    width: 180px;
+    height: 42px;
+    text-align: center;
+    border-radius: 6px!important;
+    border: 1px solid #fff;
+    color: #000!important;
+}
+
+.services .btn:hover{
+    color: #fff!important;
+    background: transparent!important;
+}
+
+@media only screen and (min-width: 995px) {
+    .services {
+        width: 1150px;
+    }
+}

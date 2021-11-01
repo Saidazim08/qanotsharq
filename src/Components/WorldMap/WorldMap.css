@@ -1,0 +1,20 @@
+#myWindow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #999;
+}
+
+#myContent {
+    transform: translate3d(0px,0px,0px) scale(1.7);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.Russian:hover{
+    fill: red;
+}
+
