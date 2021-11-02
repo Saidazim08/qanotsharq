@@ -9,6 +9,7 @@ import ru from '../../images/rus.png'
 import en from '../../images/eng.png'
 import uz from '../../images/uz.png'
 import Navbar from '../Navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 function Header() {
     const [open, setOpen] = useState(false)
@@ -25,12 +26,12 @@ function Header() {
     return (
         <header>
             <nav>
-                <a href="#"> <img src={logo} alt="?" width="200px" /></a>
+                <Link to="/"> <img src={logo} alt="?" width="200px" /></Link>
                 
                 <ul className="links">
-                    <li><a className="toplink" href="#">COVID-19</a></li>
+                    <li><Link onClick={() => setDrop(false)} className="toplink" to="/Covid">COVID-19</Link></li>
                     <li>
-                        <a className="toplink" onClick={() => setDrop(true) || setDrop2(false)} href="#">Покупка и управление</a>
+                        <Link className="toplink" onClick={() => setDrop(true) || setDrop2(false)} to="#">Покупка и управление</Link>
                         {drop ? <div className="drop-hidden position-absolute">
                             <div className="drop-body">
                                 <FontAwesomeIcon onClick={() => setDrop(false)} icon={faTimes} />
@@ -39,33 +40,33 @@ function Header() {
                                         <div className="col-lg-3">
                                             <h4>Поиск</h4>
                                             <ul>
-                                                <li><a href="#">Найти авиабилеты</a></li>
-                                                <li><a href="#">Мои бронирования</a></li>
-                                                <li><a href="#">Регистрация на рейс</a></li>
+                                                <li><Link to="#">Найти авиабилеты</Link></li>
+                                                <li><Link to="#">Мои бронирования</Link></li>
+                                                <li><Link to="#">Регистрация на рейс</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-3">
                                             <h4>Покупка</h4>
                                             <ul>
-                                                <li><a href="#">Авиабилеты</a></li>
-                                                <li><a href="#">Расписание полетов</a></li>
-                                                <li><a href="#">Маршрутная сетьс</a></li>
+                                                <li><Link to="#">Авиабилеты</Link></li>
+                                                <li><Link to="#">Расписание полетов</Link></li>
+                                                <li><Link to="#">Маршрутная сетьс</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-3">
                                             <h4>Управление</h4>
                                             <ul>
-                                                <li><a href="#">Мои бронирования</a></li>
-                                                <li><a href="#">Регистрация на рейс</a></li>
-                                                <li><a href="#">Возврат билета</a></li>
-                                                <li><a href="#">Изменение имени и фамилии</a></li>
+                                                <li><Link to="#">Мои бронирования</Link></li>
+                                                <li><Link to="#">Регистрация на рейс</Link></li>
+                                                <li><Link to="#">Возврат билета</Link></li>
+                                                <li><Link href="#">Изменение имени и фамилии</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-3">
                                             <h4>Летайте с нами</h4>
                                             <ul>
-                                                <li><a href="#">Акции</a></li>
-                                                <li><a href="#">Чартерные перевозки и популярные направление</a></li>
+                                                <li><Link to="#">Акции</Link></li>
+                                                <li><Link to="#">Чартерные перевозки и популярные направление</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -74,7 +75,7 @@ function Header() {
                         </div> : null}
                     </li>
                     <li>
-                        <a className="toplink" onClick={() => setDrop2(true)} href="#">Информация и услуги</a>
+                        <Link className="toplink" onClick={() => setDrop2(true)} to="#">Информация и услуги</Link>
                         {drop2 ? <div className="drop-hidden position-absolute">
                             <div className="drop-body">
                                 <FontAwesomeIcon onClick={() => setDrop2(false) || setDrop(false)} icon={faTimes} />
@@ -82,66 +83,66 @@ function Header() {
                                     <div className="row">
                                         <div className="col-lg-2 col-md-6">
                                             <ul>
-                                                <li className="contact"><a href="#"><FontAwesomeIcon className="me-1" icon={ faPhone} /> +998 71 227 93 07</a></li>
-                                                <li className="contact"><a href="#"><FontAwesomeIcon className="me-1" icon={faEnvelope} /> info@qanotsharq.com</a></li>
+                                                <li className="contact"><Link to="#"><FontAwesomeIcon className="me-1" icon={ faPhone} /> +998 71 227 93 07</Link></li>
+                                                <li className="contact"><Link to="#"><FontAwesomeIcon className="me-1" icon={faEnvelope} /> info@qanotsharq.com</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-2 col-md-6">
                                             <h4>Общая Информация</h4>
                                             <ul>
-                                                <li><a href="#">Тарифы</a></li>
-                                                <li><a href="#">Договор воздушной перевозки</a></li>
-                                                <li><a href="#">Правила Перевозок</a></li>
-                                                <li><a href="#">Права пассажиров</a></li>
-                                                <li><a href="#">Политика конфиденциальности</a></li>
-                                                <li><a href="#">Вопросы и ответы</a></li>
+                                                <li><Link to="#">Тарифы</Link></li>
+                                                <li><Link to="#">Договор воздушной перевозки</Link></li>
+                                                <li><Link to="#">Правила Перевозок</Link></li>
+                                                <li><Link to="#">Права пассажиров</Link></li>
+                                                <li><Link to="#">Политика конфиденциальности</Link></li>
+                                                <li><Link to="#">Вопросы и ответы</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-2 col-md-6">
                                             <h4>Подготовка к полету</h4>
                                             <ul>
-                                                <li><a href="#">Документы, необходимые для полета</a></li>
-                                                <li><a href="#">Перевозка багажа</a></li>
-                                                <li><a href="#">Перевозка животных</a></li>
-                                                <li><a href="#">Перелет детей, беременных женщин</a></li>
-                                                <li><a href="#">Перелет особых категорий пассажиров</a></li>
+                                                <li><Link to="#">Документы, необходимые для полета</Link></li>
+                                                <li><Link to="#">Перевозка багажа</Link></li>
+                                                <li><Link to="#">Перевозка животных</Link></li>
+                                                <li><Link to="#">Перелет детей, беременных женщин</Link></li>
+                                                <li><Link to="#">Перелет особых категорий пассажиров</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-2 col-md-6">
                                             <h4>В аэропорту</h4>
                                             <ul>
-                                                <li><a href="#">Регистрация и оформление багажа</a></li>
-                                                <li><a href="#">Требования авиационной безопасности</a></li>
-                                                <li><a href="#">Предполетный и послеполетный контроль</a></li>
-                                                <li><a href="#">Посадка на борт</a></li>
+                                                <li><Link to="#">Регистрация и оформление багажа</Link></li>
+                                                <li><Link to="#">Требования авиационной безопасности</Link></li>
+                                                <li><Link to="#">Предполетный и послеполетный контроль</Link></li>
+                                                <li><Link to="#">Посадка на борт</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-2 col-md-6">
                                             <h4>В полете</h4>
                                             <ul>
-                                                <li><a href="#">Питание</a></li>
-                                                <li><a href="#">Правила поведения пассажиров</a></li>
-                                                <li><a href="#">Использования электронных устройств на борту</a></li>
-                                                <li><a href="#">Бортовой журнал</a></li>
+                                                <li><Link to="#">Питание</Link></li>
+                                                <li><Link to="#">Правила поведения пассажиров</Link></li>
+                                                <li><Link to="#">Использования электронных устройств на борту</Link></li>
+                                                <li><Link to="#">Бортовой журнал</Link></li>
                                             </ul>
                                         </div>
                                         <div className="col-lg-2 col-md-6">
                                             <h4>О компании</h4>
                                             <ul>
-                                                <li><a href="#">Новости</a></li>
-                                                <li><a href="#">О нас</a></li>
-                                                <li><a href="#">Корпоративное управление</a></li>
-                                                <li><a href="#">Самолетный Парк</a></li>
-                                                <li><a href="#">Пресс-Центр</a></li>
-                                                <li><a href="#">Вакансии</a></li>
-                                                <li><a href="#">Связаться с нами</a></li>
+                                                <li><Link to="#">Новости</Link></li>
+                                                <li><Link to="#">О нас</Link></li>
+                                                <li><Link to="#">Корпоративное управление</Link></li>
+                                                <li><Link to="#">Самолетный Парк</Link></li>
+                                                <li><Link to="#">Пресс-Центр</Link></li>
+                                                <li><Link to="#">Вакансии</Link></li>
+                                                <li><Link to="#">Связаться с нами</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div> : null}</li>
-                    <li><a className="toplink" href="#">Call Center</a></li>
+                    <li><Link className="toplink" to="#">Call Center</Link></li>
                 </ul>
 
                 <ul className="top-right d-flex align-items-center">
@@ -171,7 +172,7 @@ function Header() {
                         </DropdownButton>
                     </li>
                     <li className="d-flex align-items-center">
-                        <a href="#">
+                        <Link to="#">
                             <div>
                                 <DropdownButton
                                     className="bord"
@@ -184,7 +185,7 @@ function Header() {
                                     <Dropdown.Item classname="down-red" eventKey="GBP 14 585"> GBP 14 585 <FontAwesomeIcon icon={faSortDown} /></Dropdown.Item>
                                 </DropdownButton>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav >

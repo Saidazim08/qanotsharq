@@ -1,6 +1,5 @@
 .navbar {
-    display: flex;
-    justify-content: start;
+    display: flex-start;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -11,7 +10,7 @@
     font-size: 2rem;
     background: none;
     position: absolute;
-    top: -65px;
+    top: -52px;
     right: 0;
 }
 
@@ -22,6 +21,9 @@
 }
 
 @media (max-width: 600px) {
+    .menu-bars{
+        top: -63px;
+    }
     nav{
         padding: 15px 5px;
     }

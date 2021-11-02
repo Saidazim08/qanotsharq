@@ -5,6 +5,7 @@ import first from '../../images/1st.png'
 import second from '../../images/2nd.png'
 import third from '../../images/3rd.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 const Way = () => {
 
@@ -23,9 +24,9 @@ const Way = () => {
                                 <div className="way-items-body">
                                     <span className="small">Ташкент</span>
                                     <h5>
-                                        <a className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} href="#">Киев
+                                        <Link className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} to="#">Киев
                                             <FontAwesomeIcon icon="long-arrow-alt-right" size="xs" />
-                                        </a>
+                                        </Link>
                                     </h5>
                                     <span className="small">Прямой рейс</span>
                                 </div>
@@ -39,9 +40,9 @@ const Way = () => {
                                 <div className="way-items-body">
                                     <span className="small">Ташкент</span>
                                     <h5>
-                                        <a className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} href="#">Москва
+                                        <Link className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} to="#">Москва
                                             <FontAwesomeIcon icon="long-arrow-alt-right" size="xs" />
-                                        </a>
+                                        </Link>
                                     </h5>
                                     <span className="small">Прямой рейс</span>
                                 </div>
@@ -55,9 +56,9 @@ const Way = () => {
                                 <div className="way-items-body">
                                     <span className="small">Ташкент</span>
                                     <h5>
-                                        <a className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} href="#">Шарджа
+                                        <Link className="d-flex align-items-center justify-content-between" style={{ color: "#273e9c" }} to="#">Шарджа
                                             <FontAwesomeIcon icon="long-arrow-alt-right" size="xs" />
-                                        </a>
+                                        </Link>
                                     </h5>
                                     <span className="small">Прямой рейс</span>
                                 </div>

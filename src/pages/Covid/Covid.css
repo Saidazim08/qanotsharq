@@ -1,0 +1,17 @@
+.cov a {
+    text-decoration: none;
+    color: black;
+}
+
+.cov a:hover {
+    text-decoration: underline;
+}
+
+.cov .accordion-button {
+    box-shadow: none!important;
+    border: none!important;
+    background-color: #fff!important;
+    color: #31479d!important;
+    font-size: 18px;
+    font-weight: 500;
+}

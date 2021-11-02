@@ -4,7 +4,6 @@ import MainCarousel from '../../Components/MainCarousel/MainCarousel'
 import Tabs from "../../Components/Tabs/Tabs"
 import Way from '../../Components/Way/Way'
 import News from '../../Components/News/News'
-import WorldMap from '../../Components/WorldMap/WorldMap'
 import Services from '../../Components/Services/Services'
 
 function Main() {

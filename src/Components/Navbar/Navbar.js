@@ -1,242 +1,163 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
-import { Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from 'reactstrap';
+import { Nav, NavItem} from 'reactstrap';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+
+import { Accordion } from 'react-bootstrap'
 
 function Navbar() {
+    const ref = useRef();
+
     const [sidebar, setSidebar] = useState(false)
 
-    const showSidebar = () => setSidebar(!sidebar);
+    const handleClick = () => {
+        setSidebar((prev) => !prev);
+    };
+
+    const handleClickAway = () => {
+        setSidebar(false);
+    };
+
+
     return (
         <>
-            <div className='navbar'>
-                <Link to='#' className='menu-bars'>
-                    <FontAwesomeIcon icon={faBars} onClick={showSidebar} />
-                </Link>
-            </div>
-            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                <div className='nav-menu-items'>
-                    <form className="search_sidebar">
-                        <input type="text" placeholder="Поиск по сайту" />
-                        <button>
-                            <FontAwesomeIcon icon={faSearch} />
-                        </button>
-                    </form>
-                    <div className="px-3">
-                        <Nav navbar>
-                            <NavItem className="sidebar-bold">
-                                <Link to="/">Покупка и управление</Link>
-                            </NavItem>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Поиск
-                                </DropdownToggle>
-                                <DropdownMenu >
-                                    <DropdownItem>
-                                        Найти авиабилеты
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Мои бронирования
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Регистрация на рейс
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Покупка
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Авиабилеты
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Расписание полетов
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Маршрутная сеть
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Управление
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Мои бронирования
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Регистрация на рейс
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Возврат билета
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Изменение имени и фамилии
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Летайте с нами
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Акции
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Расписание полетов
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Групповая перевозка
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem className="sidebar-bold">
-                                <Link to="/">Информация и услуги</Link>
-                            </NavItem>
-                            <NavItem className="sidebar-light">
-                                <Link to="/">+998 71 227 93 07</Link>
-                            </NavItem>
-                            <NavItem className="sidebar-light">
-                                <Link to="/">info@qanotsharq.com</Link>
-                            </NavItem>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Общая Информация
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Тарифы
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Договор воздушной перевозки
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Правила Перевозок
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Права пассажиров
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Политика конфиденциальности
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Вопросы и ответы
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    Подготовка к полету
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Документы, необходимые для полета
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Перевозка багажа
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Перевозка животных
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Перелет детей, беременных женщин
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Перелет особых категорий пассажиров
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    В аэропорту
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Регистрация и оформление багажа
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Требования авиационной безопасности
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Предполетный и послеполетный контроль
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Посадка на борт
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    В полете
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Питание
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Правила поведения пассажиров
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Использования электронных устройств на борту
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Бортовой журнал
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem className="sidebar-bold">
-                                <Link to="/">О компании</Link>
-                            </NavItem>
-                            <NavItem className="sidebar-light">
-                                <Link to="/">+998 71 227 93 07</Link>
-                            </NavItem>
-                            <NavItem className="sidebar-light">
-                                <Link to="/">info@qanotsharq.com</Link>
-                            </NavItem>
-                            <UncontrolledDropdown inNavbar>
-                                <DropdownToggle nav caret>
-                                    О компании
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem>
-                                        Новости
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        О нас
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Корпоративное управление
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Самолетный Парк
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Пресс-Центр
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Вакансии
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Связаться с нами
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem className="sidebar-bold mb-4 ">
-                                <Link to="/">Call Center</Link>
-                            </NavItem>
-                        </Nav>
+            <ClickAwayListener onClickAway={handleClickAway}>
+                <div>
+                    <div className='navbar'>
+                        <Link to='#' className='menu-bars'>
+                            <FontAwesomeIcon icon={faBars} onClick={handleClick}> </FontAwesomeIcon>
+                        </Link>
                     </div>
+                    <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                        <div ref={ref} className='nav-menu-items'>
+                            <form className="search_sidebar">
+                                <input type="text" placeholder="Поиск по сайту" />
+                                <button>
+                                    <FontAwesomeIcon icon={faSearch} />
+                                </button>
+                            </form>
+                            <div className="px-3">
+                                <Nav navbar>
+                                    <Accordion flush className="pb-5">
+                                        <NavItem className="sidebar-bold">
+                                            <Link to="/">Покупка и управление</Link>
+                                        </NavItem>
+                                        <Accordion.Item eventKey="11">
+                                            <Accordion.Header>Поиск</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Найти авиабилеты</Link><br />
+                                                <Link to="#">Мои бронирования</Link><br />
+                                                <Link to="#">Регистрация на рейс</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="12">
+                                            <Accordion.Header>Покупка</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Авиабилеты</Link><br />
+                                                <Link to="#">Расписание полетов</Link><br />
+                                                <Link to="#">Маршрутная сеть</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="13">
+                                            <Accordion.Header>Управление</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Мои бронирования</Link><br />
+                                                <Link to="#">Регистрация на рейс</Link><br />
+                                                <Link to="#">Возврат билета</Link><br />
+                                                <Link to="#">Изменение имени и фамилии</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="14">
+                                            <Accordion.Header>Летайте с нами</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Акции</Link><br />
+                                                <Link to="#">Групповая перевозка</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <NavItem className="sidebar-bold">
+                                            <Link to="/">Информация и услуги</Link>
+                                        </NavItem>
+                                        <NavItem className="sidebar-light">
+                                            <Link to="/">+998 71 227 93 07</Link>
+                                        </NavItem>
+                                        <NavItem className="sidebar-light">
+                                            <Link to="/">info@qanotsharq.com</Link>
+                                        </NavItem>
+                                        <Accordion.Item eventKey="15">
+                                            <Accordion.Header>Общая Информация</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Тарифы</Link><br />
+                                                <Link to="#">Договор воздушной перевозки</Link><br />
+                                                <Link to="#">Правила перевозок</Link><br />
+                                                <Link to="#">Права пассажиров</Link><br />
+                                                <Link to="#">Политика конфиденциальности</Link><br />
+                                                <Link to="#">Вопросы и ответы</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="16">
+                                            <Accordion.Header>Подготовка к полету</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Документы, необходимые для осуществления перелёта</Link><br />
+                                                <Link to="#">Перевозка багажа</Link><br />
+                                                <Link to="#">Перевозка животных</Link><br />
+                                                <Link to="#">Перелет детей, беременных женщин</Link><br />
+                                                <Link to="#">Перелет особых категорий пассажиров</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="17">
+                                            <Accordion.Header>В аэропорту</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Регистрация пассажиров и оформление багажа</Link><br />
+                                                <Link to="#">Требования авиационной безопасности</Link><br />
+                                                <Link to="#">Предполетный и послеполетный контроль</Link><br />
+                                                <Link to="#">Посадка на борт</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="18">
+                                            <Accordion.Header>В полете</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Питание</Link><br />
+                                                <Link to="#">Правила поведения пассажиров</Link><br />
+                                                <Link to="#">Использования электронных устройств на борту</Link><br />
+                                                <Link to="#">Бортовой журнал</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <NavItem className="sidebar-bold">
+                                            <Link to="/">О компании</Link>
+                                        </NavItem>
+                                        <NavItem className="sidebar-light">
+                                            <Link to="/">+998 71 227 93 07</Link>
+                                        </NavItem>
+                                        <NavItem className="sidebar-light">
+                                            <Link to="/">info@qanotsharq.com</Link>
+                                        </NavItem>
+                                        <Accordion.Item eventKey="18">
+                                            <Accordion.Header>В полете</Accordion.Header>
+                                            <Accordion.Body>
+                                                <Link to="#">Новости</Link><br />
+                                                <Link to="#">О нас</Link><br />
+                                                <Link to="#">Корпоративное управление</Link><br />
+                                                <Link to="#">Самолетный Парк</Link><br />
+                                                <Link to="#">Пресс-Центр</Link><br />
+                                                <Link to="#">Ваканции</Link><br />
+                                                <Link to="#">Связаться с нами</Link>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <NavItem className="sidebar-bold mb-4 ">
+                                            <Link to="/">Call Center</Link>
+                                        </NavItem>
+                                    </Accordion>
+                                </Nav>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-
+            </ClickAwayListener>
         </>
     )
 }

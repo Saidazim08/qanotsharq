@@ -3,8 +3,8 @@ import './MainCarousel.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import bg1 from "../../images/slide1.webp";
-import bg2 from "../../images/slide2.webp";
+import bg1 from "../../images/sliderbg1.png";
+import bg2 from "../../images/sliderbg2.png";
 
 export default class MainCarousel extends Component {
     render() {

@@ -199,6 +199,10 @@ button {
   box-shadow: 0 0 20px #00000030;
 }
 
+.app-drop-inside span{
+  user-select: none;
+}
+
 .app-drop-inside .fw-bold{
   font-size: 15px;
 }

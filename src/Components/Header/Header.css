@@ -155,14 +155,14 @@ li {
 
 .middle .dropdown-menu.show,
 .bord .dropdown-menu.show {
-    inset: 20px auto auto -31px !important;
+    inset: 11px auto auto -31px !important;
     box-shadow: 0 0 46px rgb(0 0 0 / 15%);
 }
 
 .drop-hidden {
     z-index: 101;
     padding: 40px 0;
-    top: 100px;
+    top: 82px;
     width: 100%;
     left: 0;
     background-color: #fff;
