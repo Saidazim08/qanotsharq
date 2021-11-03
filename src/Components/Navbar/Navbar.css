@@ -5,7 +5,7 @@
 }
 
 .menu-bars {
-    color: #000!important; 
+    color: #000 !important;
     margin-right: 2rem;
     font-size: 2rem;
     background: none;
@@ -21,10 +21,10 @@
 }
 
 @media (max-width: 600px) {
-    .menu-bars{
+    .menu-bars {
         top: -63px;
     }
-    nav{
+    nav {
         padding: 15px 5px;
     }
 }
@@ -48,26 +48,26 @@
     transition: 350ms;
 }
 
-.nav-menu-items{
-  width: 350px;
+.nav-menu-items {
+    width: 350px;
     height: 100%;
     overflow-y: auto;
 }
 
-.search_sidebar{
+.search_sidebar {
     position: relative;
     width: 100%;
-    height: auto!important;
+    height: auto !important;
 }
 
-.search_sidebar input{
+.search_sidebar input {
     width: 100%;
     padding: 10px 30px 10px 45px;
     outline-offset: 0px;
     margin-bottom: 30px;
 }
 
-.search_sidebar button{
+.search_sidebar button {
     background: inherit;
     border: none;
     position: absolute;
@@ -76,41 +76,63 @@
     left: 5px;
 }
 
-.sidebar-bold a{
+.sidebar-bold a {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2em;
-    color: #263366!important;
+    color: #263366 !important;
     border-bottom: 1px solid #d3d3d3;
     padding: 10px 0;
     display: inline-block;
     width: 100%;
 }
 
-.navbar-nav .dropdown a, .sidebar-light a{
+.sidebar-bold a:first-child {
+    border: none;
+}
+
+.navbar-nav .dropdown a,
+.sidebar-light a {
     width: 100%;
     padding: 10px 0;
     display: inline-block;
-    color: #000!important;
+    color: #000 !important;
     text-decoration: none;
     border-bottom: 1px solid #d3d3d3;
 }
 
-.navbar-nav .dropdown .dropdown-item{
-white-space: inherit;
+.navbar-nav .dropdown .dropdown-item {
+    white-space: inherit;
 }
 
-
-.navbar-nav .dropdown-menu{
+.navbar-nav .dropdown-menu {
     border: none;
 }
 
+.navbar-nav .accordion-button {
+    padding: 1rem 0;
+    color: #233b9a;
+}
 
+.navbar-nav .accordion-button:not(.collapsed) {
+    border: none;
+    background-color: white;
+    box-shadow: none;
+}
 
+.navbar-nav .accordion-button:focus{
+    border: none;
+    box-shadow: none;
+}
 
+.navbar-nav .accordion-collapse .accordion-body a{
+    margin: 5px 0;
+    color: #233b9a!important;
+    text-decoration: none;
+}
 
-
-
-
-
+.navbar-nav .accordion-collapse .accordion-body{
+    line-height: 16px;
+    padding: 0 1.25rem 10px 1.25rem;
+}
 

@@ -1,13 +1,25 @@
-.section-2{
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(165, 165, 165);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #263366;
+}
+
+.section-2 {
     background-color: #f4feff;
     padding-bottom: 80px;
 }
 
-.section-3{
+.section-3 {
     background: #263366;
 }
 
-.section-5{
+.section-5 {
     background-color: #f4feff;
 }
 

@@ -121,7 +121,6 @@ function Tabs() {
                 <label className="fw-bold mb-2">Откуда</label>
                 <DropdownButton
                   className="border-end"
-                  placeholder="123123"
                   title={flyfrom}
                   onSelect={selectFlyfrom}
                 >
@@ -134,7 +133,6 @@ function Tabs() {
                 <label className="fw-bold mb-2">Куда</label>
                 <DropdownButton
                   className="border-end"
-                  placeholder="123123"
                   title={flyto}
                   onSelect={selectFlyto}
                 >

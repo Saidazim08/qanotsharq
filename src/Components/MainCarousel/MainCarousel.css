@@ -22,7 +22,10 @@
     padding-left: 0;
 }
 
-.bg-slide1 img {
+.slick-slider img {
+    min-height: 280px;
+    object-fit: cover;
+    object-position: left;
 }
 
 
