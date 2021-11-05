@@ -1,232 +1,233 @@
 .widget {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: -120px;
-  width: 1100px;
-  min-height: 250px;
-  height: 250px;
-  color: #000;
-  word-break: break-all;
-  padding: 0;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   top: -120px;
+   width: 1100px;
+   min-height: 250px;
+   height: 250px;
+   color: #000;
+   word-break: break-all;
+   padding: 0;
 }
 
 @media only screen and (max-width: 767px) {
-  .widget {
-    display: none;
-  }
+   .widget {
+      display: none;
+   }
 }
 
 .bloc-tabs {
-  display: flex;
-  height: 70px;
+   display: flex;
+   height: 70px;
 }
 
 .bloc-tabs img {
-  margin-right: 10px;
-  margin-bottom: 5px;
+   margin-right: 10px;
+   margin-bottom: 5px;
 }
 
 .tabs {
-  color: white;
-  padding: 15px;
-  text-align: center;
-  width: 50%;
-  background: rgba(0, 0, 0, 0.301);
-  cursor: pointer;
-  border-bottom: 1px solid rgb(104, 104, 104);
-  box-sizing: content-box;
-  position: relative;
-  outline: none;
+   color: white;
+   padding: 15px;
+   text-align: center;
+   width: 50%;
+   background: rgba(0, 0, 0, 0.301);
+   cursor: pointer;
+   border-bottom: 1px solid rgb(104, 104, 104);
+   box-sizing: content-box;
+   position: relative;
+   outline: none;
 }
 
 .tabs:nth-child(2) {
-  border-left: 1px solid rgb(104, 104, 104);
-  border-right: 1px solid rgb(104, 104, 104);
+   border-left: 1px solid rgb(104, 104, 104);
+   border-right: 1px solid rgb(104, 104, 104);
 }
 
 .tabs:first-child {
-  border-top-left-radius: 6px;
+   border-top-left-radius: 6px;
 }
 
 .tabs:last-child {
-  border-top-right-radius: 6px;
+   border-top-right-radius: 6px;
 }
 
 .active-tabs {
-  background: #263366 !important;
-  border-bottom: 1px solid rgb(104, 104, 104);
+   background: #263366 !important;
+   border-bottom: 1px solid rgb(104, 104, 104);
 }
 
 button {
-  border: none;
+   border: none;
 }
 .content-tabs {
-  flex-grow: 1;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+   flex-grow: 1;
+   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 .content {
-  color: white;
-  background: #263366;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  display: none;
+   color: white;
+   background: #263366;
+   padding: 20px;
+   width: 100%;
+   height: 100%;
+   display: none;
 }
 
 .active-content {
-  display: block;
+   display: block;
 }
 
 .dropdown-toggle {
-  width: 100%;
-  border-radius: none;
-  height: 50px;
+   width: 100%;
+   border-radius: none;
+   height: 50px;
 }
 
 .btn {
-  text-align: inherit;
-  border: 0;
-  color: grey !important;
-  background-color: #fff !important;
-  border-radius: 0 !important;
+   text-align: inherit;
+   border: 0;
+   color: grey !important;
+   background-color: #fff !important;
+   border-radius: 0 !important;
 }
 
 .btn:focus {
-  box-shadow: none !important;
+   box-shadow: none !important;
 }
 
 .content .dropdown-toggle::after {
-  color: black !important;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
+   color: black !important;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 10px;
 }
 
 .tb1 .dropdown-menu {
-  min-width: 259px;
+   min-width: 259px;
 }
 
 .tb1 .row {
-  --bs-gutter-x: 0;
+   --bs-gutter-x: 0;
 }
 
 .tb1 .col-5 {
-  padding: 0;
+   padding: 0;
 }
 
 .tb1 .col-5 input {
-  padding-left: 10px;
-  height: 37px;
+   padding-left: 10px;
+   height: 37px;
 }
 
 .tb1 .col-2 {
-  padding: 0;
-  margin-top: 32px;
+   padding: 0;
+   margin-top: 32px;
 }
 
 .tb2 input {
-  margin: 10px 0;
-  height: 50px;
+   margin: 10px 0;
+   height: 50px;
 }
 
 .tb2 button {
-  margin-top: 34px;
-  width: 100%;
-  height: 50px;
-  border: 1px solid #ffda00;
-  background-color: #ffda00;
-  transition: 0.4s;
+   margin-top: 34px;
+   width: 100%;
+   height: 50px;
+   border: 1px solid #ffda00;
+   background-color: #ffda00;
+   transition: 0.4s;
 }
 
 .tb2 button:hover {
-  background-color: inherit;
-  color: #ffda00;
+   background-color: inherit;
+   color: #ffda00;
 }
 
 .col-2 button {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #ffda00;
-  background-color: #ffda00;
-  transition: 0.4s;
+   width: 100%;
+   height: 50px;
+   border: 1px solid #ffda00;
+   background-color: #ffda00;
+   transition: 0.4s;
 }
 
 .col-2 button:hover {
-  background-color: inherit;
-  color: #ffda00;
+   background-color: inherit;
+   color: #ffda00;
 }
 
 .MuiFormControl-root {
-  width: 100%;
-  background-color: #fff !important;
-  border: none !important;
-  border-right: 1px solid rgb(104, 104, 104) !important;
+   width: 100%;
+   background-color: #fff !important;
+   border: none !important;
+   border-right: 1px solid rgb(104, 104, 104) !important;
 }
 
-.MuiInput-underline:before, .MuiInput-underline:after{
-  display: none;
+.MuiInput-underline:before,
+.MuiInput-underline:after {
+   display: none;
 }
 
 .app-drop {
-  display: inline-block;
-  position: relative;
+   display: inline-block;
+   position: relative;
 }
 
 .app-drop-body {
-  padding-top: 10px;
-  color: black;
-  display: none;
-  position: absolute;
-  width: 250px;
-  height: auto;
-  z-index: 100;
+   padding-top: 10px;
+   color: black;
+   display: none;
+   position: absolute;
+   width: 250px;
+   height: auto;
+   z-index: 100;
 }
 
 .app-drop:hover .app-drop-body {
-  display: block;
+   display: block;
 }
 
 .app-drop-body:hover {
-  display: block;
+   display: block;
 }
 
-.app-drop-inside{
-  border-radius: 6px;
-  padding: 15px;
-  background: #fff;
-  box-shadow: 0 0 20px #00000030;
+.app-drop-inside {
+   border-radius: 6px;
+   padding: 15px;
+   background: #fff;
+   box-shadow: 0 0 20px #00000030;
 }
 
-.app-drop-inside span{
-  user-select: none;
+.app-drop-inside span {
+   user-select: none;
 }
 
-.app-drop-inside .fw-bold{
-  font-size: 15px;
+.app-drop-inside .fw-bold {
+   font-size: 15px;
 }
 
 .circle {
-  padding-bottom: 5px;
-  font-weight: 400;
-  font-size: 1.4em;
-  cursor: pointer;
-  background: #edf0f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
+   padding-bottom: 5px;
+   font-weight: 400;
+   font-size: 1.4em;
+   cursor: pointer;
+   background: #edf0f5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 25px;
+   height: 25px;
+   border-radius: 50%;
 }
 
-.MuiPickersToolbar-toolbar{
-  background-color: #263366!important;
+.MuiPickersToolbar-toolbar {
+   background-color: #263366 !important;
 }
 
 .app-drop-body .active {
-  color: #3182c4;
-  border: 1px solid #3182c4;
-  background: #3182c429;
+   color: #3182c4;
+   border: 1px solid #3182c4;
+   background: #3182c429;
 }

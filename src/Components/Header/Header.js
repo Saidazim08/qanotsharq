@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Header.css"
 import logo from "../../logo.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope, faPhone, faSortDown, faSortUp, faTimes, faGlobe, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faSortDown, faSortUp, faTimes, faGlobe, faSearch } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-bootstrap/Dropdown'
 import { DropdownButton } from 'react-bootstrap'
 import ru from '../../images/rus.png'
@@ -23,11 +23,11 @@ function Header() {
     const selectValute = (v) => {
         setValute(v)
     }
+
     return (
         <header>
             <nav>
                 <Link to="/"> <img src={logo} alt="?" width="200px" /></Link>
-                
                 <ul className="links">
                     <li><Link onClick={() => setDrop(false)} className="toplink" to="/Covid">COVID-19</Link></li>
                     <li>
@@ -83,7 +83,7 @@ function Header() {
                                     <div className="row">
                                         <div className="col-lg-2 col-md-6">
                                             <ul>
-                                                <li className="contact"><Link to="#"><FontAwesomeIcon className="me-1" icon={ faPhone} /> +998 71 227 93 07</Link></li>
+                                                <li className="contact"><Link to="#"><FontAwesomeIcon className="me-1" icon={faPhone} /> +998 71 227 93 07</Link></li>
                                                 <li className="contact"><Link to="#"><FontAwesomeIcon className="me-1" icon={faEnvelope} /> info@qanotsharq.com</Link></li>
                                             </ul>
                                         </div>
@@ -142,7 +142,7 @@ function Header() {
                                 </div>
                             </div>
                         </div> : null}</li>
-                    <li><Link className="toplink" to="#">Call Center</Link></li>
+                    <li><Link className="toplink" to="/Callcenter">Call Center</Link></li>
                 </ul>
 
                 <ul className="top-right d-flex align-items-center">
@@ -179,10 +179,10 @@ function Header() {
                                     title={valute}
                                     onSelect={selectValute}
                                 >
-                                    <Dropdown.Item classname="down-red" eventKey="USD 10 700"> USD 10 700 <FontAwesomeIcon icon={faSortDown} /> </Dropdown.Item>
-                                    <Dropdown.Item classname="up-green" eventKey="EUR 12 366"> EUR 12 366 <FontAwesomeIcon icon={faSortUp} /> </Dropdown.Item>
-                                    <Dropdown.Item classname="down-red" eventKey="RUB 149"> RUB 149 <FontAwesomeIcon icon={faSortDown} /></Dropdown.Item>
-                                    <Dropdown.Item classname="down-red" eventKey="GBP 14 585"> GBP 14 585 <FontAwesomeIcon icon={faSortDown} /></Dropdown.Item>
+                                    <Dropdown.Item eventKey="USD 10 700"> USD 10 700 <FontAwesomeIcon icon={faSortDown} /> </Dropdown.Item>
+                                    <Dropdown.Item eventKey="EUR 12 366"> EUR 12 366 <FontAwesomeIcon icon={faSortUp} /> </Dropdown.Item>
+                                    <Dropdown.Item eventKey="RUB 149"> RUB 149 <FontAwesomeIcon icon={faSortDown} /></Dropdown.Item>
+                                    <Dropdown.Item eventKey="GBP 14 585"> GBP 14 585 <FontAwesomeIcon icon={faSortDown} /></Dropdown.Item>
                                 </DropdownButton>
                             </div>
                         </Link>

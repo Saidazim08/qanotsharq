@@ -8,21 +8,21 @@ import Covid from './pages/Covid/Covid'
 
 function App() {
   return (
-    <Router>
-      <Header />
+      <Router>
+        <Header />
 
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
 
-        <Route path="/Covid">
-          <Covid />
-        </Route>
-      </Switch>
+          <Route path="/Covid">
+            <Covid />
+          </Route>
+        </Switch>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
   );
 }
 
